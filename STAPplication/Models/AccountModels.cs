@@ -30,7 +30,7 @@ namespace STAPplication.Models
     public class RegisterExternalLoginModel
     {
         [Required]
-        [Display(Name = "User name")]
+        [Display(Name = "Bedrijfsnaam")]
         public string UserName { get; set; }
 
         public string ExternalLoginData { get; set; }
@@ -58,7 +58,7 @@ namespace STAPplication.Models
     public class LoginModel
     {
         [Required]
-        [Display(Name = "User name")]
+        [Display(Name = "Bedrijfsnaam")]
         public string UserName { get; set; }
 
         [Required]
@@ -73,19 +73,44 @@ namespace STAPplication.Models
     public class RegisterModel
     {
         [Required]
-        [Display(Name = "User name")]
+        [Display(Name = "Bedrijfsnaam")]
         public string UserName { get; set; }
 
         [Required]
+        [Display(Name = "Adres")]
+        public string Address { get; set; }
+
+        [Required]
+        [Display(Name = "Website")]
+        public string Site { get; set; }
+
+        [Required]
+        [Display(Name = "E-mail contactpersoon")]
+        public string Email { get; set; }
+
+        [Required]
+        [Display(Name = "Telefoon contactpersoon")]
+        public string Phone { get; set; }
+
+        [Required]
+        [Display(Name = "Bereikbaarhead")]
+        public string Mobility { get; set; }
+
+        [Required]
+        [Display(Name = "Type bedrijfsactiviteit")]
+        public string Type { get; set; }
+
+        /*[Required]
         [StringLength(100, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 6)]
         [DataType(DataType.Password)]
-        [Display(Name = "Password")]
+        [Display(Name = "Paswoord")]
         public string Password { get; set; }
 
         [DataType(DataType.Password)]
-        [Display(Name = "Confirm password")]
+        [Display(Name = "Bevestig paswoord")]
         [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
-        public string ConfirmPassword { get; set; }
+        public string ConfirmPassword { get; set; }*/
+
     }
 
     public class ExternalLogin
