@@ -106,7 +106,7 @@ namespace STAPplication.Models
         public string Phone { get; set; }
 
         [Required]
-        [Display(Name = "Bereikbaarhead (Wagen, openbaar vervoer, georganiseerd door bedrijf,...)")]
+        [Display(Name = "Bereikbaarheid (Wagen, openbaar vervoer, georganiseerd door bedrijf,...)")]
         public string Mobility { get; set; }
 
         [Required]
