@@ -27,7 +27,7 @@ namespace STAPplication.Models
         [Key]
         [DatabaseGeneratedAttribute(DatabaseGeneratedOption.Identity)]
         public int UserId { get; set; }
-        public string UserName { get; set; }
+        public string UerName { get; set; }
     }
 
     public class RegisterExternalLoginModel
