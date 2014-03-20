@@ -85,6 +85,7 @@ namespace STAPplication.Models
         public string City { get; set; }
 
         [Required]
+        [DataType(DataType.Url)]
         [Display(Name = "Website")]
         public string Site { get; set; }
 
@@ -93,15 +94,19 @@ namespace STAPplication.Models
         public string ContactName { get; set; }
 
         [Required]
+        [DataType(DataType.EmailAddress)]
+        [RegularExpression("^[_A-Za-z0-9-]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\\.[A-Za-z0-9-]+)*(\\.[A-Za-z]{2,})$",ErrorMessage = "Foutief emailadres")]
         [Display(Name = "E-mail contactpersoon")]
         public string Email { get; set; }
 
         [Required]
+        [DataType(DataType.PhoneNumber)]
+        [RegularExpression("[0-9]{0,14}$",ErrorMessage = "Foutief telefoonnummer!")]
         [Display(Name = "Telefoon contactpersoon")]
         public string Phone { get; set; }
 
         [Required]
-        [Display(Name = "Bereikbaarhead")]
+        [Display(Name = "Bereikbaarhead (Wagen, openbaar vervoer, georganiseerd door bedrijf,...)")]
         public string Mobility { get; set; }
 
         [Required]
