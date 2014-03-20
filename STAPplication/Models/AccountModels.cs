@@ -1,10 +1,12 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity;
 using System.Globalization;
 using System.Web.Security;
+using System.Web.WebPages.Html;
 
 namespace STAPplication.Models
 {
@@ -17,6 +19,7 @@ namespace STAPplication.Models
 
         public DbSet<UserProfile> UserProfiles { get; set; }
     }
+
 
     [Table("UserProfile")]
     public class UserProfile
@@ -94,7 +97,7 @@ namespace STAPplication.Models
 
         [Required]
         [Display(Name = "Bereikbaarhead")]
-        public string Mobility { get; set; }
+        public List<SelectListItem> Mobility { get; set; }
 
         [Required]
         [Display(Name = "Type bedrijfsactiviteit")]

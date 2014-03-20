@@ -1,4 +1,9 @@
-﻿@model STAPplication.Models.RegisterModel
+﻿@using System.Collections
+@using STAPplication.Models
+@model STAPplication.Models.RegisterModel
+
+@functions {public IEnumerable Mobility { get; set; }
+}
 @{
     ViewBag.Title = "Registreer";
 }
@@ -36,7 +41,7 @@
             </li>
             <li>
                 @Html.LabelFor(m => m.Mobility)
-                @Html.TextBoxFor(m => m.Mobility)
+                @Html.DropDownListFor(m => m.Mobility)
             </li>
             <li>
                 @Html.LabelFor(m => m.Type)

@@ -19,7 +19,7 @@ namespace STAPplication.Controllers
     {
         //
         // GET: /Account/Login
-
+        
         [AllowAnonymous]
         public ActionResult Login(string returnUrl)
         {
@@ -404,4 +404,5 @@ namespace STAPplication.Controllers
         }
         #endregion
     }
+
 }
