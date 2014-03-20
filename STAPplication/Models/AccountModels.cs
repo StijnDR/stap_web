@@ -1,12 +1,10 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity;
 using System.Globalization;
 using System.Web.Security;
-using System.Web.WebPages.Html;
 
 namespace STAPplication.Models
 {
@@ -19,7 +17,6 @@ namespace STAPplication.Models
 
         public DbSet<UserProfile> UserProfiles { get; set; }
     }
-
 
     [Table("UserProfile")]
     public class UserProfile
@@ -88,6 +85,7 @@ namespace STAPplication.Models
         public string City { get; set; }
 
         [Required]
+        [DataType(DataType.Url)]
         [Display(Name = "Website")]
         public string Site { get; set; }
 
@@ -96,16 +94,20 @@ namespace STAPplication.Models
         public string ContactName { get; set; }
 
         [Required]
+        [DataType(DataType.EmailAddress)]
+        [RegularExpression("^[_A-Za-z0-9-]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\\.[A-Za-z0-9-]+)*(\\.[A-Za-z]{2,})$",ErrorMessage = "Foutief emailadres")]
         [Display(Name = "E-mail contactpersoon")]
         public string Email { get; set; }
 
         [Required]
+        [DataType(DataType.PhoneNumber)]
+        [RegularExpression("[0-9]{0,14}$",ErrorMessage = "Foutief telefoonnummer!")]
         [Display(Name = "Telefoon contactpersoon")]
         public string Phone { get; set; }
 
         [Required]
-        [Display(Name = "Bereikbaarhead")]
-        public List<SelectListItem> Mobility { get; set; }
+        [Display(Name = "Bereikbaarhead (Wagen, openbaar vervoer, georganiseerd door bedrijf,...)")]
+        public string Mobility { get; set; }
 
         [Required]
         [Display(Name = "Type bedrijfsactiviteit")]
