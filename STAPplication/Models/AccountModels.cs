@@ -114,14 +114,14 @@ namespace STAPplication.Models
         public string Type { get; set; }
 
         [Required]
-        [StringLength(100, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 6)]
+        [StringLength(100, ErrorMessage = "Het {0} moet minstens {2} tekens lang zijn.", MinimumLength = 6)]
         [DataType(DataType.Password)]
         [Display(Name = "Paswoord")]
         public string Password { get; set; }
 
         [DataType(DataType.Password)]
         [Display(Name = "Bevestig paswoord")]
-        [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
+        [Compare("Password", ErrorMessage = "Paswoord en bevestig paswoord komen niet overeen!")]
         public string ConfirmPassword { get; set; }
 
     }
