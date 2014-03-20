@@ -84,8 +84,16 @@ namespace STAPplication.Models
         public string Address { get; set; }
 
         [Required]
+        [Display(Name = "Gemeente")]
+        public string City { get; set; }
+
+        [Required]
         [Display(Name = "Website")]
         public string Site { get; set; }
+
+        [Required]
+        [Display(Name = "Naam contactpersoon")]
+        public string ContactName { get; set; }
 
         [Required]
         [Display(Name = "E-mail contactpersoon")]
@@ -103,7 +111,7 @@ namespace STAPplication.Models
         [Display(Name = "Type bedrijfsactiviteit")]
         public string Type { get; set; }
 
-        /*[Required]
+        [Required]
         [StringLength(100, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 6)]
         [DataType(DataType.Password)]
         [Display(Name = "Paswoord")]
@@ -112,7 +120,7 @@ namespace STAPplication.Models
         [DataType(DataType.Password)]
         [Display(Name = "Bevestig paswoord")]
         [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
-        public string ConfirmPassword { get; set; }*/
+        public string ConfirmPassword { get; set; }
 
     }
 
