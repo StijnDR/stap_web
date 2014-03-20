@@ -22,9 +22,17 @@
                 @Html.LabelFor(m => m.Address)
                 @Html.TextBoxFor(m => m.Address)
             </li>
+             <li>
+                @Html.LabelFor(m => m.City)
+                @Html.TextBoxFor(m => m.City)
+            </li>
             <li>
                 @Html.LabelFor(m => m.Site)
                 @Html.TextBoxFor(m => m.Site)
+            </li>
+             <li>
+                @Html.LabelFor(m => m.ContactName)
+                @Html.TextBoxFor(m => m.ContactName)
             </li>
             <li>
                 @Html.LabelFor(m => m.Email)
@@ -41,6 +49,14 @@
             <li>
                 @Html.LabelFor(m => m.Type)
                 @Html.TextBoxFor(m => m.Type)
+            </li>
+            <li>
+                @Html.LabelFor(m => m.Password)
+                @Html.TextBoxFor(m => m.Password)
+            </li>
+             <li>
+                @Html.LabelFor(m => m.ConfirmPassword)
+                @Html.TextBoxFor(m => m.ConfirmPassword)
             </li>
         </ol>
         <input type="submit" value="Registreer" />
